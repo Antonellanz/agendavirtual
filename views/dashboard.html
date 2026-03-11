@@ -1,84 +1,52 @@
-
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>Sistema Droguería</title>
-<link rel="stylesheet" href="/style.css">
+<html lang="es"> <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Droguería</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
 
-<div class="layout">
+    <h1>Panel Droguería</h1>
 
-<div class="sidebar">
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total productos</h3>
+            <h2 id="totalProductos">0</h2>
+        </div>
 
-<h2>Trade Farma</h2>
+        <div class="card">
+            <h3>Vencen pronto</h3>
+            <h2 id="vencen">0</h2>
+        </div>
 
-<ul>
+        <div class="card">
+            <h3>Stock bajo</h3>
+            <h2 id="stockBajo">0</h2>
+        </div>
 
-<li onclick="location.href='/'">🏠 Dashboard</li>
+        <div class="card orange">
+            <h3>Cumpleaños próximos</h3>
+            <h2 id="cumples">0</h2>
+        </div>
+    </div>
 
-<li onclick="location.href='/ver-productos'">
-📦 Productos
-</li>
+    <div class="panel">
+        <div class="box">
+            <h3>Productos que vencen pronto</h3>
+            <ul id="listaVencimientos"></ul>
+        </div>
 
-<li onclick="location.href='/productos'">
-➕ Cargar Producto
-</li>
+        <div class="box">
+            <h3>Alertas</h3>
+            <ul id="alertas"></ul>
+        </div>
+    </div>
 
-<li onclick="location.href='/cumpleanos'">
-🎂 Cumpleaños
-</li>
+    <br>
 
-<li onclick="location.href='/analisis'">
-📊 Análisis
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="content">
-
-<h1>Dashboard</h1>
-
-<div class="cards">
-
-<div class="card">
-<h3>📦 Productos</h3>
-<p id="totalProductos">0</p>
-</div>
-
-<div class="card">
-<h3>⚠ Por vencer</h3>
-<p id="productosVencer">0</p>
-</div>
-
-<div class="card">
-<h3>📉 Stock bajo</h3>
-<p id="stockBajo">0</p>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="noticias">
-
-<h3>Recordatorios</h3>
-
-<ul id="alertas">
-<li>Cargando...</li>
-</ul>
-
-</div>
-
-</div>
-
-<script src="/dashboard.js"></script>
-
+    <div class="box"> <h3>Análisis por mes</h3>
+        <div class="analisis-grid" id="analisisPanel">
+            </div>
+    </div> <script src="/app.js"></script>
 </body>
 </html>

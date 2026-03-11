@@ -1,15 +1,40 @@
-<h1>Cargar análisis</h1>
+<!DOCTYPE html>
+<html>
 
-<form id="formAnalisis">
+<head>
 
-<input type="text" placeholder="Producto" id="producto">
+<title>Subir análisis</title>
 
-<input type="date" id="fecha">
+</head>
 
-<input type="text" placeholder="Tipo de análisis" id="tipo">
+<body>
 
-<input type="file" id="archivo">
+<h2>Subir análisis</h2>
 
-<button>Guardar</button>
+<form action="/subir-analisis" method="POST" enctype="multipart/form-data">
+
+<select name="mes">
+
+<option value="2026-01">Enero</option>
+<option value="2026-02">Febrero</option>
+<option value="2026-03">Marzo</option>
+
+</select>
+
+<br><br>
+
+<input type="file" name="pdf">
+
+<br><br>
+
+<button type="submit">
+
+Subir análisis
+
+</button>
 
 </form>
+
+</body>
+
+</html>
